@@ -85,7 +85,7 @@ public class PecaDAO extends Repository {
     }
 
     public PecaTO update(PecaTO peca) {
-        String sql = "update ddd_remedios set nome_da_peca=?, valor_unitario=? where codigo=?";
+        String sql = "update aaa_pecas set nome_da_peca=?, valor_unitario=? where codigo=?";
         try(PreparedStatement ps = getConnection().prepareStatement(sql)) {
             ps.setString(1, peca.getNomeDaPeca());
             ps.setDouble(2, peca.getValorUnitario());

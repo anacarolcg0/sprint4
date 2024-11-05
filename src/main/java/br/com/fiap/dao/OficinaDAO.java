@@ -85,7 +85,7 @@ public class OficinaDAO extends Repository {
     }
 
     public OficinaTO update(OficinaTO oficina) {
-        String sql = "update aaa_oficinas set nome_da_oficina=?, endereco_da_oficina where codigo=?";
+        String sql = "update aaa_oficinas set nome_da_oficina=?, endereco_da_oficina=? where codigo=?";
         try(PreparedStatement ps = getConnection().prepareStatement(sql)) {
             ps.setString(1, oficina.getNomeDaOficina());
             ps.setString(2, oficina.getEnderecoDaOficina());

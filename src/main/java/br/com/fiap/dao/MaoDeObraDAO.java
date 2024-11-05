@@ -85,7 +85,7 @@ public class MaoDeObraDAO extends Repository {
     }
 
     public MaoDeObraTO update(MaoDeObraTO maoDeObra) {
-        String sql = "update ddd_remedios set descricao_mao_de_obra=?, valor_hora=? where codigo=?";
+        String sql = "update aaa_maos_de_obra set descricao_mao_de_obra=?, valor_hora=? where codigo=?";
         try(PreparedStatement ps = getConnection().prepareStatement(sql)) {
             ps.setString(1, maoDeObra.getDescricaoMaoDeObra());
             ps.setDouble(2, maoDeObra.getValorHora());
